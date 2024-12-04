@@ -55,7 +55,7 @@ async function createRequestInit(options: FetchOptions): Promise<RequestInit> {
     if (options.multipartData) {
       const FormData = isBrowser()
         ? window.FormData
-        : eval('require')('form-data');
+        : require('form-data');
       const formData = new FormData();
       for (const item of options.multipartData) {
         if (item.fileStream) {
@@ -308,7 +308,7 @@ async function calculateMD5Hash(data: string | Buffer): Promise<string> {
   }
 
   // Node environment
-  createHash = eval('require')('crypto').createHash;
+  createHash = require('crypto').createHash;
   return createHash('sha1').update(data).digest('hex');
 }
 
