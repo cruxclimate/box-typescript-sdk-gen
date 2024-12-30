@@ -1,8 +1,8 @@
 {
   "name": "box-typescript-sdk-gen",
   "author": "Box <oss@box.com>",
-  "version": "1.10.0",
-  "description": "Official Box TypeScript Generated SDK",
+  "version": "1.10.0-crux.1",
+  "description": "Crux Fork of the Official Box TypeScript Generated SDK",
   "keywords": [
     "box",
     "sdk",
