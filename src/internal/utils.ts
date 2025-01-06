@@ -519,7 +519,7 @@ export async function computeWebhookSignature(
     const result = await hmac.digest('binary');
     signature = Buffer.from(result).toString('base64');
   } else {
-    let crypto = eval('require')('crypto');
+    let crypto = require('crypto');
     let hmac = crypto.createHmac('sha256', signatureKey);
     hmac.update(escapedBody);
     hmac.update(headers['box-delivery-timestamp']);
